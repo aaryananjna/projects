@@ -27,3 +27,12 @@ document.documentElement.classList.toggle(
     'dark',
     localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
   )
+
+  function toggleTheme(){
+    document.documentElement.classList.toggle('dark');
+    if(document.documentElement.classList.contains('dark')){
+        localStorage.theme = 'dark';
+    }else{
+        localStorage.theme = 'light';
+    }
+  }

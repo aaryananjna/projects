@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,13 @@
 
     <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
         <img src="whitelogo.png" alt="Logo"
-        class="w-28 cursor-pointer mr-14">
-        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo">
+        class="w-28 cursor-pointer mr-14 dark:hidden">
+
+        <img src="blacklogo.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 hidden dark:block">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full 
+        px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:borderwhite/50 dark:bg-transparent">
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#services">Services</a></li>
@@ -28,21 +33,29 @@
         </ul>
 
         <div class="flex items-center gap-4 ">
-        <button><img src="moon_icon.png" alt="" class="w-6"></button>
+        <button onclick="toggleTheme()">
+            <img src="moon_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="sun_icon.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
         <a href="#contact" 
-        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo">  
-        Contact <img src="arrow-icon.png" alt=""
-        class="w-3"></a>
+        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 
+        font-Ovo dark:border-white/50">  
+        Contact 
+        <img src="arrow-icon.png" alt="" class="w-3 dark:hidden">
+        <img src="arrow-icon-dark.png" alt="" class="w-3 hidden dark:block">
+    </a>
 
         <button class="block md:hidden ml-3" onclick="openMenu()">
-            <img src="menu-black.png" alt="" class="w-6 ">
+            <img src="menu-black.png" alt="" class="w-6 dark:hidden">
+            <img src="menu-white.png" alt="" class="w-6 hidden dark:block">
         </button>
 
         </div>
 
 <!------mobile menu------> 
         <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 
-        bottom-0 w-64 z-50 h-screen bg-red-50 transition duration-500 font-Ovo">
+        bottom-0 w-64 z-50 h-screen bg-red-50 transition duration-500 font-Ovo dark:bg-[#2a004a]">
 
             <div class="absolute right-6 top-6" onclick="closeMenu()">
                 <img src="close-black.png" alt="" class=" w-5 cursor-pointer">
@@ -63,7 +76,7 @@
     <img src="profilepic.png" alt="" class="rounded-full w-32">
     <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">Hi! I'm Aaryan Anjna <img src="hand-icon.png" alt="" class="w-6"></h3>
     <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Student studying cybersecurity</h1>
-    <p class="max-w-2xl mx-auto font-Ovo> I am a student studying cybersecurity with experience in languages like python, html, javascript. I have participation in many clubs</p>
+    <p class="max-w-2xl mx-auto font-Ovo"> I am a student studying cybersecurity with experience in languages like python, html, javascript. I have participation in many clubs</p>
 
 
     <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
