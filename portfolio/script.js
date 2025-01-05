@@ -3,11 +3,11 @@ const navBar = document.querySelector("nav");
 const navLinks = document.querySelector("nav ul");
 
 function openMenu(){
-    sideMenu.style.transform. = 'translateX(-16rem)';
+    sideMenu.style.transform = 'translateX(-16rem)';
 }
 
 function closeMenu(){
-    sideMenu.style.transform. = 'translateX(16rem)';
+    sideMenu.style.transform = 'translateX(16rem)';
 }
 
 window.addEventListener('scroll', ()=>{
@@ -26,7 +26,7 @@ window.addEventListener('scroll', ()=>{
 if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.
 matchMedia('(prefers-color-scheme: dark)').matches)){
     document.documentElement.classList.add('dark')
-    }else{
+    } else  {
         document.documentElement.classList.remove('dark')
     }
 
