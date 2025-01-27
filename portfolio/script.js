@@ -20,6 +20,20 @@ window.addEventListener('scroll', ()=>{
     }
 })
 
+document.getElementById('show-more-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    let hiddenProjects = document.getElementById('hidden-projects');
+    let showMoreBtn = document.getElementById('show-more-btn');
+    if (hiddenProjects.classList.contains('hidden')) {
+        hiddenProjects.classList.remove('hidden');
+        showMoreBtn.textContent = 'Show Less';
+    } else {
+        hiddenProjects.classList.add('hidden');
+        showMoreBtn.textContent = 'Show More';
+    }
+});
+
+
 
 // light mode and dark mode
 
