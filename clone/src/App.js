@@ -1,12 +1,13 @@
 
 import './App.css';
+import gptLogo from './assets/chatgpt.svg';
 
 function App() {
   return (
     <div className="App">
         <div className="sidebar">
             <div className="upperSide">
-                <div className="upperSideTop"><img src="" alt="" className="logo" /><span className="brand">ChatGpt</span></div>
+                <div className="upperSideTop"><img src={gptLogo} alt="" className="logo" /><span className="brand">ChatGpt</span></div>
                 <button className="midBtn"><img src="" alt="" className="addBtn" />New Chat</button>
                 <div className="upperSideBottom">
                   <button className="query"><img src="" alt="" className="" />What is Programming?</button>
