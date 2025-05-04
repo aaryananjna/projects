@@ -1,17 +1,13 @@
-import OpenAI from 'openai';
-
-const openai = new OpenAI({
-  apiKey: "REMOVED", // ⚠️ WARNING: don't expose this in frontend!
-  dangerouslyAllowBrowser: true, // Required if using in frontend (but still unsafe)
-});
-
+// src/openai.js
 export async function sendMsgToOpenAI(message) {
-  const res = await openai.chat.completions.create({
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: "user", content: message }],
-    temperature: 0.7,
-    max_tokens: 256,
+  const response = await fetch('/api/generate', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ message }),
   });
-
-  return res.choices[0].message.content;
+  
+  const data = await response.json();
+  return data.response;
 }
