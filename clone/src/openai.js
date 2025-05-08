@@ -1,6 +1,6 @@
 // src/openai.js
 export async function sendMsgToOpenAI(message) {
-  const response = await fetch('/api/generate', {
+  const response = await fetch('https://chatbot-clone-real.onrender.com/api/generate', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
