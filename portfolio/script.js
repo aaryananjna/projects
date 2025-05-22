@@ -24,12 +24,17 @@ document.getElementById('show-more-btn').addEventListener('click', function(even
     event.preventDefault();
     let hiddenProjects = document.getElementById('hidden-projects');
     let showMoreBtn = document.getElementById('show-more-btn');
+
     if (hiddenProjects.classList.contains('hidden')) {
         hiddenProjects.classList.remove('hidden');
-        showMoreBtn.textContent = 'Show Less';
+        showMoreBtn.innerHTML = `Show Less
+            <img src="right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+            <img src="right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">`;
     } else {
         hiddenProjects.classList.add('hidden');
-        showMoreBtn.textContent = 'Show More';
+        showMoreBtn.innerHTML = `Show More
+            <img src="right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+            <img src="right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">`;
     }
 });
 
